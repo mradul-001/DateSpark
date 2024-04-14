@@ -1,0 +1,14 @@
+[
+  {
+    "username": "mradul-001",
+    "password": "123456",
+    "secret_question": "My fav color?",
+    "secret_answer": "Black"
+  },
+  {
+    "username": "new",
+    "password": "123",
+    "secret_question": "hello",
+    "secret_answer": "hello"
+  }
+]

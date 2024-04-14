@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style-login.css">
+    <link rel="shortcut icon" href="logi.ico" type="image/x-icon">
+    <title>Login</title>
+</head>
+
+<body>
+
+    <div class="topnav">
+        <a href="index.html">
+            <h1>DateSpark</h1>
+        </a>
+    </div>
+
+    <main>
+
+        <div class="container" id="cont">
+
+            <h1>Login</h1>
+            <!-- <form action="http://localhost:5500/submit_login" method="POST"> -->
+            <label for="username">Username: </label><br>
+            <input type="text" id="username" name="username" required><br>
+
+            <label for="password">Password: </label><br>
+            <input type="password" id="password" name="password" required><br>
+
+            <button class="jn-btn" id="login-btn" onclick="login()">Login</button>
+
+            <br><br><br>
+            <!-- </form> -->
+            <a class="f-pass" onclick="check1()">Forgot Password?</a>
+            <a href="signup.html" class="new_to">New To DateSpark?</a>
+
+        </div>
+
+        <div class="container2 container" id="cont2">
+
+            <label for="cont2_username">Username: </label><br>
+            <input type="text" id="cont2_username" required><br>
+            <button id="submit" class="jn-btn" onclick="check2()">Next</button>
+
+        </div>
+
+        <div class="container3 container" id="cont3">
+            <label for="secret-answer" id="secret-question"></label>
+            <input type="text" id="secret-answer"><br>
+            <button id="submit" class="jn-btn" onclick="check3()">Submit</button>
+
+        </div>
+
+        <div class="container4 container" id="cont4">
+            <!-- <label for="new-password">Enter new password: </label><br>
+            <input type="password" id="new-password"><br>
+            <label for="confirm-new-password">Confirm new password: </label><br>
+            <input type="password" id="confirm-new-password"><br>
+            <button id="change-password" class="jn-btn" onclick="check3()">Change Password</button> -->
+        </div>
+
+    </main>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="script-login.js" async defer></script>
+
+</body>
+
+</html>

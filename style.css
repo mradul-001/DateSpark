@@ -1,0 +1,270 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,700;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Rubik+Scribble&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Oswald:wght@200..700&family=Rajdhani:wght@300;400;500;600;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik+Scribble&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Oswald:wght@200..700&family=Rajdhani:wght@300;400;500;600;700&family=Rubik+Scribble&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Figtree:ital,wght@0,300..900;1,300..900&family=Oswald:wght@200..700&family=Rajdhani:wght@300;400;500;600;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik+Scribble&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(61, 61, 61);
+  cursor: pointer;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(0, 0, 0);
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.807);
+}
+
+body {
+  overflow-x: hidden;
+  background-image: url("Backgrounds/bg7.jpg");
+  background-size: 100% 100vh;
+  background-repeat: no-repeat;
+  animation: change_bg 10s linear 0 infinite forwards ease;
+}
+
+@keyframes change_bg {
+  0% {
+    body {
+      background-image: url("Backgrounds/bg7.jpg");
+    }
+  }
+  50% {
+    body {
+      background-image: url("Backgrounds/bg6.jpeg");
+    }
+  }
+  100% {
+    body {
+      background-image: url("Backgrounds/bg7.jpg");
+    }
+  }
+}
+
+.topnav {
+  overflow: hidden;
+}
+
+.topnav a {
+  float: right;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  padding-right: 80px;
+  padding-top: 60px;
+  text-decoration: none;
+  font-size: 20px;
+  font-family: roboto;
+}
+
+.topnav a:hover {
+  color: whitesmoke;
+  text-decoration: overline;
+}
+
+.topnav a.split {
+  float: left;
+  font-family: oswald;
+  color: rgb(255, 255, 255);
+  font-size: 60px;
+  padding-left: 80px;
+  padding-top: 30px;
+}
+
+.topnav a.split:hover {
+  text-decoration: none;
+}
+
+.txt0 {
+  color: white;
+  font-family: figtree;
+  text-align: center;
+  width: 50%;
+  padding: 15% 10%;
+  box-sizing: border-box;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.content {
+  background-color: white;
+}
+
+.content h1 {
+  color: rgb(12, 73, 255);
+  font-family: oswald;
+  font-size: 45px;
+  text-align: center;
+  padding: 50px;
+}
+
+.img-container {
+  padding: 50px;
+}
+
+.img-container::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.img-container img {
+  width: 70%;
+  border: 5px solid rgb(12, 73, 255);
+  border-radius: 20px;
+}
+
+.box {
+  float: left;
+  width: 33.33%;
+  text-align: center;
+}
+
+.box p {
+  /* font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ; */
+  font-family: oswald;
+}
+
+.box p:nth-child(odd) {
+  padding-top: 20px;
+}
+
+.box p:nth-child(even) {
+  padding-top: 10px;
+}
+
+.comp::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.comp {
+  padding-bottom: 100px;
+}
+
+.fig {
+  width: 50%;
+  float: left;
+  box-sizing: border-box;
+}
+
+.fig img {
+  width: 40%;
+  padding-left: 40%;
+}
+
+.txt1 {
+  width: 50%;
+  height: 20vw;
+  float: left;
+  font-family: rajdhani;
+  font-weight: 600;
+  font-size: 20px;
+  color: rgba(0, 0, 0, 0.901);
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  text-align: left;
+  padding-right: 15%;
+}
+
+.jn {
+  background-color: rgb(12, 73, 255);
+  text-align: center;
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+.jn h1 {
+  font-family: oswald;
+  font-size: 40px;
+  color: aliceblue;
+  padding-top: 100px;
+}
+
+.jn img {
+  height: 150px;
+  padding-top: 40px;
+}
+
+.jn p {
+  color: rgba(240, 248, 255, 0.84);
+  font-family: roboto;
+  font-size: 20px;
+  padding: 50px 25%;
+}
+
+.jn-btn {
+  padding: 15px 30px;
+  font-family: rajdhani;
+  letter-spacing: 1px;
+  font-size: 20px;
+  font-weight: bold;
+  background-image: linear-gradient(to right, rgb(255, 0, 0), rgb(255, 136, 0));
+  border: none;
+  border-radius: 10px;
+  color: white;
+  margin-bottom: 70px;
+  cursor: pointer;
+  box-shadow: 2px 2px 10px black;
+}
+
+footer {
+  background-color: rgb(12, 73, 255);
+  padding: 50px 100px;
+  display: flex;
+  align-items: center;
+}
+
+footer .col0 {
+  text-align: center;
+}
+
+footer .col0 span {
+  color: rgb(147, 255, 114);
+}
+
+footer .col0 h1 {
+  color: rgb(0, 255, 4);
+  font-family: oswald;
+  font-weight: 400;
+  font-size: 60px;
+}
+
+.col0 {
+  width: 50%;
+  float: left;
+}
+
+.col1 {
+  float: left;
+  width: 50%;
+}
+
+.col1 p {
+  font-family: rajdhani;
+  color: rgba(240, 248, 255, 0.878);
+  font-size: 20px;
+}
+
+.col1 h1 {
+  font-family: oswald;
+  font-weight: 300;
+  color: white;
+}
+
+.col1 a {
+  text-decoration: none;
+  color: rgba(240, 248, 255, 0.889);
+}

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>DateSpark</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="logi.ico" type="image/x-icon">
+
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Anton&family=Figtree:ital,wght@0,300..900;1,300..900&family=Oswald:wght@200..700&family=Rajdhani:wght@300;400;500;600;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik+Scribble&display=swap");
+        @import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,700;1,700&display=swap");
+
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        ::-webkit-scrollbar {
+            width: 5px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: rgb(61, 61, 61);
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgb(0, 0, 0);
+        }
+
+        ::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0.807);
+        }
+
+
+
+        body {
+            background-image: url("Backgrounds/bg6.jpg");
+            background-size: 100%;
+        }
+
+        .topnav {
+            overflow: hidden;
+        }
+
+        .topnav a {
+            float: right;
+            color: rgba(205, 248, 255, 0.785);
+            text-align: center;
+            padding-right: 50px;
+            padding-top: 40px;
+            text-decoration: none;
+            font-size: 20px;
+            font-family: roboto;
+        }
+
+        .topnav a:hover {
+            color: whitesmoke;
+            text-decoration: overline;
+        }
+
+        .topnav a.split {
+            float: left;
+            font-family: oswald;
+            color: rgb(255, 255, 255);
+            font-size: 60px;
+            padding: 10px 0 10px 50px;
+        }
+
+        .topnav a.split:hover {
+            text-decoration: none;
+        }
+
+        .result_container {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 50px;
+        }
+
+        #student-details {
+            background: rgba(0, 0, 0, 0.507);
+            max-width: 30%;
+            padding: 50px;
+            box-sizing: border-box;
+            text-align: center;
+            border-radius: 10px;
+        }
+
+        #student-details img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgb(0, 0, 0);
+            cursor: pointer;
+        }
+
+        #student-details h1 {
+            text-align: center;
+            font-family: oswald;
+            color: rgb(201, 230, 255);
+            font-weight: 400;
+            letter-spacing: 1px;
+            margin-bottom: 50px;
+        }
+
+        #student-details p {
+            color: rgb(255, 255, 255);
+            font-family: rajdhani;
+            font-size: 20px;
+            font-weight: 500;
+            margin-top: 10px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="topnav">
+        <a href="#" class="split">DateSpark</a>
+        <a href="login.html">Logout</a>
+        <a href="scroll_or_swipe.html">Scroll Through Profiles</a>
+    </div>
+    <div class="result_container">
+        <div id="student-details">
+        </div>
+    </div>
+
+
+    <script>
+        // Retrieve highest-scoring student from localStorage
+        const highestScoringStudent = JSON.parse(localStorage.getItem("highestScoringStudent"));
+
+        // Display student details
+        const studentContainer = document.getElementById("student-details");
+
+        if (highestScoringStudent) {
+            studentContainer.innerHTML = `
+    <h1>Your Match!</h1>
+    <img src ="${highestScoringStudent.Photo}">
+    <p>${highestScoringStudent.Name} (${highestScoringStudent.Age})</p>
+    <p>Interest: ${highestScoringStudent.Interests.join(", ")}</p>
+    <p>Hobbies: ${highestScoringStudent.Hobbies.join(", ")}</p>
+  `;
+        } else {
+            studentContainer.innerHTML = `<p>No highest-scoring student found.</p>`;
+        }
+
+        // Clear localStorage after retrieving the data (optional)
+        localStorage.removeItem("highestScoringStudent");
+
+    </script>
+
+
+</body>
+
+</html>

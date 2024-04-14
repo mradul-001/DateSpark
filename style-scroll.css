@@ -1,0 +1,182 @@
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Figtree:ital,wght@0,300..900;1,300..900&family=Oswald:wght@200..700&family=Rajdhani:wght@300;400;500;600;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik+Scribble&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  overflow-x: hidden;
+  background-image: url("Backgrounds/bg4.jpg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(61, 61, 61);
+  cursor: pointer;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(0, 0, 0);
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.807);
+}
+
+.topnav h1 {
+  color: rgb(255, 255, 255);
+  font-family: oswald;
+  padding: 10px 50px;
+  font-size: 60px;
+  font-weight: 400;
+  text-shadow: 1px 1px 50px black;
+
+}
+
+.topnav a {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+}
+
+.topnav a:focus,
+a:active {
+  text-decoration: none;
+}
+
+main {
+  margin: 0px 100px;
+}
+
+#heading {
+  /* position: sticky;
+  top: 0; */
+  text-align: center;
+  color: rgb(255, 255, 255);
+  font-family: oswald;
+  font-weight: 400;
+  text-shadow: 2px 2px 5px black;
+  font-size: 40px;
+  padding-bottom: 20px;
+  z-index: 1000;
+}
+
+#content {
+  background-color: rgba(0, 0, 0, 0.264);
+  border-radius: 15px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-row-gap: 100px;
+  padding: 40px 15px;
+  padding-bottom: 50px;
+  margin-bottom: 100px;
+  backdrop-filter: blur(2px);
+}
+
+#content div {
+  position: relative;
+}
+
+#content img {
+  width: 80%;
+  height: 90%;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 10px;
+  cursor: pointer;
+  opacity: 1;
+  /* border: 4px solid rgba(0, 0, 255, 0.844); */
+  /* border: 4px solid white; */
+  box-shadow: 0px 0px 15px rgb(0, 0, 0);
+}
+
+#content div .overlay {
+  background: rgba(0, 0, 0, 0.9);
+  width: 80%;
+  height: 90%;
+  position: absolute;
+  left: 50%;
+  bottom: 50%;
+  transform: translate(-50%, 50%);
+  cursor: pointer;
+  border-radius: 5px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  
+  color: rgba(240, 255, 255, 0.784);
+  font-family: roboto;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 30px;
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  padding: 10%;
+  box-sizing: border-box;
+}
+
+.sent{
+  width: 100%;
+}
+
+.key {
+  /* color: rgba(255, 98, 0, 0.871); */
+  color: rgba(118, 183, 205);
+  width: 50%;
+  font-weight: 400;
+}
+
+.value{
+  float: right;
+  width: 50%;
+  font-size: smaller;
+}
+
+.overlay hr{
+  width: 100%;
+  margin: 10px;
+}
+
+#content .overlay:hover{
+  opacity: 1;
+}
+
+.student_name {
+  padding: 10px;
+  position: absolute;
+  bottom: -10%;
+  left: 50%;
+  transform: translateX(-50%);
+  color: rgb(255, 255, 255);
+  font-family: rajdhani;
+  font-size: 25px;
+  font-weight: 500;
+  /* text-shadow: 1px 1px 3px white; */
+}
+
+.div_inside_content.scrollUp {
+  animation: scrollUp 0.5s ease-out forwards;
+}
+
+@keyframes scrollUp {
+  0% {
+      opacity: 0;
+      transform: translateY(50px) scale(1);
+  }
+
+  100% {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+}
+}

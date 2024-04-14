@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>DateSpark</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="logi.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style-scroll.css">
+</head>
+
+<body>
+
+    <div class="topnav">
+        <a href="index.html">
+            <h1>
+                DateSpark
+            </h1>
+        </a>
+    </div>
+
+    <h1 id="heading">Profiles</h1>
+
+    <select name="gender_select" id="gender_select">
+        <option value="Male">Male</option>
+        <option value="Female">Female</option>
+        <option value="Other">Other</option>
+        <option value="select" disabled selected hidden>Select</option>
+    </select>
+    <button onclick="applyFilter()">Apply filter</button>
+
+    <main>
+        <div id="content">
+        </div>
+    </main>
+
+    <script>
+
+        let content = document.getElementById('content');
+        var jsonFilePath = 'student.json';
+
+
+
+        fetch(jsonFilePath)
+            .then(response => {
+
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.json();
+            })
+            .then(data => {
+
+                data.forEach(function (student) {
+
+                    let newDiv = document.createElement('div');
+                    let newImg = document.createElement('img');
+                    let overlay = document.createElement('div');
+                    let name = document.createElement('p');
+
+                    overlay.className = 'overlay';
+                    newDiv.className = 'div_inside_content';
+
+                    newImg.src = student.Photo;
+                    name.textContent = student.Name;
+                    name.className = 'student_name';
+
+                    overlay.innerHTML = "<hr><span class = 'sent'><span class='key'>Roll Number </span>  <span class='value'>: " + student.IITB_Roll_Number + "</span></span>" +
+                        "<span class = 'sent'><span class='key'>Year Of Study </span> <span class='value'>: " + student.Year_of_Study + "</span></span>" +
+                        "<span class = 'sent'><span class='key'>Age </span>  <span class='value'>: " + student.Age + "</span></span>" +
+                        "<span class = 'sent'><span class='key'>Gender </span>  <span class='value'>: " + student.Gender + "</span></span>" +
+                        "<span class = 'sent'><span class='key'>Interests </span>  <span class='value'>: " + student.Interests.join(", ") + "</span></span><hr>";
+
+                    newDiv.appendChild(newImg);
+                    newDiv.appendChild(overlay);
+                    content.appendChild(newDiv);
+                    newDiv.appendChild(name);
+
+                });
+
+            });
+
+
+
+        window.addEventListener('load', applyFilter())
+        // Function to create scrolling effect
+
+        function animateOnScroll() {
+            const cards = document.querySelectorAll('.div_inside_content');
+            cards.forEach(card => {
+                const rect = card.getBoundingClientRect();
+                if (rect.top <= window.innerHeight && rect.top >= window.innerHeight - 100 && !card.classList.contains('scrollUp')) {
+                    card.classList.add('scrollUp');
+                }
+            });
+        }
+
+
+    </script>
+
+</body>
+
+</html>

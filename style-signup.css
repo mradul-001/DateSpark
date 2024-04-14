@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Figtree:ital,wght@0,300..900;1,300..900&family=Oswald:wght@200..700&family=Rajdhani:wght@300;400;500;600;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik+Scribble&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body {
+  overflow-x: hidden;
+  background-image: url("Backgrounds/bg4.jpg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+::-webkit-scrollbar{
+    width: 5px;
+  }
+  
+  ::-webkit-scrollbar-thumb{
+    background: rgb(61, 61, 61);
+    cursor: pointer;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover{
+    background: rgb(0, 0, 0);
+  }
+  
+  ::-webkit-scrollbar-track{
+    background: rgba(255, 255, 255, 0.807);
+  }
+  
+
+.topnav h1 {
+    color: rgb(255, 255, 255);
+    font-family: oswald;
+    padding: 30px 80px;
+    font-size: 60px;
+    font-weight: 400;
+}
+
+.topnav a{
+    text-decoration: none;
+}
+
+.topnav a:focus{
+    text-decoration: none;
+}
+
+
+.wrapper{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.container{
+    width: 35%;
+    height: auto;
+    padding: 4%;
+    box-sizing: border-box;
+    border-radius: 10px;
+    background: #000000a4;
+    box-shadow: 2px 2px 15px rgba(255, 255, 255, 0.175);
+}
+
+.container h1{
+    color: rgb(0, 204, 255);
+    font-family: oswald;
+    letter-spacing: 2px;
+    font-size: 40px;
+    font-weight: 400;
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+.container label{
+    font-family: rajdhani;
+    font-weight: 500;
+    color: aliceblue;
+    font-size: 25px;
+    padding-bottom: 5px;
+}
+
+.container input{
+    margin: 10px 0;
+    padding: 7px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: none;
+    font-family: roboto;
+    font-size: medium;
+    color: rgba(9, 9, 9, 0.804);
+    width: 100%;
+}
+
+.container input:focus{
+    outline: 1px solid rgb(55, 55, 55);
+}
+
+.jn-btn{
+    margin-top: 30px;
+    padding: 10px 30px;
+    font-family: rajdhani;
+    letter-spacing: 1px;
+    font-size: 25px;
+    font-weight: bold;
+    background-image: linear-gradient(to right, rgb(255, 0, 0), rgb(255, 136, 0));
+    border: none;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+    box-shadow: 2px 2px 10px black;
+    width: 100%;
+}
+
+.container a{
+    color: whitesmoke;
+    text-decoration: none;
+    font-family: roboto;
+    font-size: large;
+}

@@ -1,0 +1,164 @@
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Figtree:ital,wght@0,300..900;1,300..900&family=Oswald:wght@200..700&family=Rajdhani:wght@300;400;500;600;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik+Scribble&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,700;1,700&display=swap");
+
+*margin {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-image: url("Backgrounds/bg6.jpg");
+  background-size: 100%;
+  display: none;
+}
+
+.topnav {
+  overflow: hidden;
+}
+
+.topnav a {
+  float: right;
+  color: rgba(205, 248, 255, 0.785);
+  text-align: center;
+  padding-right: 50px;
+  padding-top: 40px;
+  text-decoration: none;
+  font-size: 20px;
+  font-family: roboto;
+}
+
+.topnav a:hover {
+  color: whitesmoke;
+  text-decoration: overline;
+}
+
+.topnav a.split {
+  float: left;
+  font-family: oswald;
+  color: rgb(255, 255, 255);
+  font-size: 60px;
+  padding: 10px 0 10px 50px;
+}
+
+.topnav a.split:hover {
+  text-decoration: none;
+}
+
+#question-container {
+  background: rgba(0, 0, 0, 0.601);
+  width: 50%;
+  height: auto;
+  position: absolute;
+  padding: 50px 10px 80px 10px;
+  box-sizing: border-box;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+}
+
+#question {
+  text-align: left;
+}
+
+#question h2 {
+  font-family: rajdhani;
+  font-size: 30px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.793);
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 20px;
+  border: 1px solid rgb(29, 29, 29);
+  color: rgba(37, 37, 37, 0.879);
+}
+
+input[type="text"]:focus {
+  outline: 0;
+}
+
+button {
+  padding: 5px 20px;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+  width: 100%;
+  font-family: oswald;
+  font-size: 25px;
+  font-weight: 300;
+  background-image: linear-gradient(to right, rgb(255, 0, 0), rgb(255, 136, 0));
+}
+
+#question select {
+  width: 100%;
+  font-size: 20px;
+  font-family: roboto;
+  color: rgba(37, 37, 37, 0.879);
+  padding: 5px;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+#question select:focus {
+  outline: 0;
+}
+
+#question select option {
+  font-family: roboto;
+}
+
+input[type="email"]{
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
+    border: 1px solid rgb(29, 29, 29);
+    color: rgba(37, 37, 37, 0.879);
+}
+
+input[type="email"]:focus {
+  outline: 0;
+}
+
+.gender{
+    display: flex;
+    justify-content: space-around;
+    font-family: roboto ;
+    color: rgb(0, 136, 255);
+    font-size: 18px;
+}
+
+.option-container, .option-container2{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+    font-family: roboto;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.option-container input[type="checkbox"]:checked + label{
+    color: rgb(0, 128, 255);
+}
+
+.option-container2 input[type="checkbox"]:checked + label{
+    color: rgb(0, 128, 255);
+}
+
+.find_match{
+    word-spacing: 1px;
+}
