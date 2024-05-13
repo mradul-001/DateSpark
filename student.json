@@ -11,17 +11,6 @@
     "Photo": "Profiles/aryan_sharma.jpg"
   },
   {
-    "IITB_Roll_Number": "2023002",
-    "Name": "Aditi Singh",
-    "Year_of_Study": "2nd",
-    "Age": 20,
-    "Gender": "Female",
-    "Interests": ["Movies", "Art"],
-    "Hobbies": ["Reading", "Painting"],
-    "Email": "aditi@example.com",
-    "Photo": "Profiles/aditi_singh.jpg"
-  },
-  {
     "IITB_Roll_Number": "2023003",
     "Name": "Anuj Patel",
     "Year_of_Study": "4th",
@@ -131,44 +120,6 @@
     "Hobbies": ["Gardening", "Painting"],
     "Email": "navya@example.com",
     "Photo": "Profiles/navya_garg.jpg"
-  },
-  {
-    "IITB_Roll_Number": "2023013",
-    "Name": "Purvi Jain",
-    "Year_of_Study": "2nd",
-    "Age": 18,
-    "Gender": "Female",
-    "Interests": ["Sports", "Technology"],
-    "Hobbies": ["Coding", "Cooking"],
-    "Email": "purvi@example.com",
-    "Photo": "Profiles/purvi_jain.jpg"
-  },
-  {
-    "IITB_Roll_Number": "2023014",
-    "Name": "Kanishka Gupta",
-    "Year_of_Study": "3rd",
-    "Age": 21,
-    "Gender": "Female",
-    "Interests": ["Art", "Fashion"],
-    "Hobbies": [
-      "Watching YouTube/Instagram",
-      "Cooking",
-      "Gardening",
-      "Painting"
-    ],
-    "Email": "kanishka@example.com",
-    "Photo": "Profiles/kanishka_gupta.jpg"
-  },
-  {
-    "IITB_Roll_Number": "2023015",
-    "Name": "Bhoomi Motihar",
-    "Year_of_Study": "4th",
-    "Age": 22,
-    "Gender": "Female",
-    "Interests": ["Sports", "Traveling", "Fashion"],
-    "Hobbies": ["Music", "Reading", "Painting"],
-    "Email": "bhoomi@example.com",  
-    "Photo": "Profiles/bhoomi_motihar.jpg"
   },
   {
     "IITB_Roll_Number": "2023016",
